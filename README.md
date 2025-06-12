@@ -2,7 +2,7 @@
 # Minecraft Server Automation on AWS
 
 ## Overview
-This project automates the provisioning and configuration of a Minecraft server on AWS using Terraform and AWS CLI. The infrastructure includes a VPC, subnet, security group, and an EC2 instance with auto-start capabilities for the Minecraft server.
+This project automates the creation and configuration of a Minecraft server on AWS using Terraform. The infrastructure includes a VPC, subnet, security group, and an EC2 instance with the auto-start capabilities. The process to get started has been simplified to ensure an easy install, within 5 minutes of cloning the source repo, you should be up and running!
 
 ## Requirements
 
@@ -52,8 +52,8 @@ export AWS_DEFAULT_REGION="us-west-2"
 ### 1. Clone the Repository
 
 ```bash
-git clone 
-cd minecraft-aws
+git clone https://github.com/freetycho/sysAdminProject
+cd sysAdminProject
 ```
 ### 2. Initialize Terraform
 
@@ -63,9 +63,9 @@ terraform init
 ### 3. Deploy Infrastructure
 
 ```bash
-terraform apply -auto-approve
+terraform apply
 ```
-After execution, Terraform will output the Minecraft server’s public IP (e.g.,  `minecraft_server_ip = 54.189.1.2`).
+After execution, Terraform will output the Minecraft server’s public IP (something like `minecraft_server_ip = 54.189.1.2`).
 
 ### 4. Verify Server Connectivity
 
@@ -82,4 +82,4 @@ Expected output:
 ### 5. Connect to Minecraft
 
 Use the output IP in your Minecraft client under  **Multiplayer**  >  **Direct Connect**.
-The server will be available at the EIP, which is the IP printed in the console after running the terraform plan
+The server will be available at the EIP, which is the IP printed in the console after running the terraform plan.
